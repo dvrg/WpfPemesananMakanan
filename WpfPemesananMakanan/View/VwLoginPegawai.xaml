@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfPemesananMakanan.View.VwLoginPegawai"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPemesananMakanan.View"
+        mc:Ignorable="d"
+        Title="Masuk Ke Sistem Pemesanan" Height="500" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <TextBox x:Name="textNmPengguna" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" TextChanged="textNmPengguna_TextChanged" Margin="215,241,0,0" FontSize="16" VerticalContentAlignment="Center" Padding="5,0" AutomationProperties.IsRequiredForForm="True"/>
+        <Button x:Name="btnLogin" Content="Masuk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="305,356,0,0" Click="btnLogin_Click" Height="30" FontSize="14" IsDefault="True"/>
+        <PasswordBox x:Name="passwordBoxSandi" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,307,0,0" Width="165" Height="35" VerticalContentAlignment="Center" Padding="5,0" AutomationProperties.IsRequiredForForm="True" FontSize="16"/>
+        <Button x:Name="btnBatal" Content="Batal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="215,356,0,0" Click="btnCancel_Click" Height="30" FontSize="14"/>
+        <Label x:Name="label" Content="Sandi" HorizontalAlignment="Left" Margin="215,276,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="ID Pegawai" HorizontalAlignment="Left" Margin="215,210,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="250,40,0,0">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="{DynamicResource ISContact}"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label x:Name="label2" Content="Masukan akun anda untuk melanjutkan.." HorizontalAlignment="Left" Margin="187,169,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Versi 0.1" HorizontalAlignment="Left" Margin="270,425,0,0" VerticalAlignment="Top" FontSize="10"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfPemesananMakanan.View.Admin.AddPegawai"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPemesananMakanan.View.Admin"
+        mc:Ignorable="d"
+        Title="Tambah Data Pegawai" Height="768" Width="1366" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel Height="100" LastChildFill="False" VerticalAlignment="Top" Background="#FFD8D8D8">
+            <StackPanel VerticalAlignment="Top" Height="20">
+                <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Background="{x:Null}">
+                    <MenuItem Header="Menu">
+                        <MenuItem Header="Lihat Menu" HorizontalAlignment="Left" Width="175" Click="MenuItemLihatMenu_Click"/>
+                        <MenuItem Header="Tambah Menu" HorizontalAlignment="Left" Width="175" Click="MenuItemTambahMenu_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="User">
+                        <MenuItem Header="Tambah User" HorizontalAlignment="Left" Width="175" Click="MenuItemTambahUser_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Transaksi">
+                        <MenuItem Header="Lihat Transaksi" HorizontalAlignment="Left" Width="175" Click="MenuItemTambahUser_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Akun">
+                        <MenuItem Header="Edit Profil" Click="MenuItemEditUser_Click"/>
+                        <Separator HorizontalAlignment="Left" Width="140"/>
+                        <MenuItem Header="Keluar" Click="MenuItemKeluarUser_Click" HorizontalAlignment="Left" Width="140"/>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+        </DockPanel>
+        <Grid Margin="200,0,200,0">
+            <Grid Margin="0,0,450,0">
+                <TextBox x:Name="textNmPegawai" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="168,331,0,0" Width="290" TextChanged="textNmPegawai_TextChanged" VerticalContentAlignment="Center" Padding="5,0" FontSize="16"/>
+                <Label x:Name="label" Content="Nama Pegawai" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,332,0,0" FontSize="18"/>
+                <Label x:Name="label1" Content="Jabatan" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="0,381,0,0" FontSize="18" />
+                <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="168,380,0,0" SelectionChanged="comboBox_SelectionChangedJabatan" FontSize="16" VerticalContentAlignment="Center" Padding="6,5,5,5" Height="35"/>
+                <Label x:Name="label2" Content="Nomor Telepon" HorizontalAlignment="Left" Margin="0,431,0,0" VerticalAlignment="Top" FontSize="18"/>
+                <TextBox x:Name="textNmrTelepon" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="" Margin="168,430,0,0" VerticalAlignment="Top" Width="290" TextChanged="textNmrTelepon_TextChanged" FontSize="16" VerticalContentAlignment="Center" Padding="5,0"/>
+                <Label x:Name="label3" Content="Sandi" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,480,0,0" FontSize="18"/>
+                <Label x:Name="label4" Content="Alamat" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,529,0,0" FontSize="18"/>
+                <TextBox x:Name="textAlamat" HorizontalAlignment="Left" Height="110" TextWrapping="Wrap" Text="" Margin="168,529,0,0" VerticalAlignment="Top" Width="290" TextChanged="textAlamat_TextChanged" FontSize="16" VerticalContentAlignment="Center" Padding="5,0"/>
+                <Button x:Name="btnSimpanPegawai" Content="Simpan" HorizontalAlignment="Left" Margin="168,674,0,0" VerticalAlignment="Top" Width="140" Click="btnSimpanPegawai_Click" Height="45" FontSize="16"/>
+                <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="35" Margin="168,479,0,0" VerticalAlignment="Top" Width="140" HorizontalContentAlignment="Center" Padding="5,0" FontSize="16"/>
+            </Grid>
+            <Grid Margin="513,0,0,0">
+                <Label x:Name="label_Copy" Content="Nama Jabatan" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,332,0,0" FontSize="18"/>
+                <TextBox x:Name="textNmJabatan" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Margin="167,331,0,0" TextChanged="textNmJabatan_TextChanged" FontSize="16"/>
+                <Button x:Name="btnSimpanJabatan" Content="Simpan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="167,401,0,0" Click="btnSimpanJabatan_Click" Height="45" FontSize="16"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

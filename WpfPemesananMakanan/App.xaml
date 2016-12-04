@@ -2,8 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfPemesananMakanan"
-             StartupUri="MainWindow.xaml">
+             StartupUri="View/VwLoginPegawai.xaml">
     <Application.Resources>
-         
+
+        <BitmapImage x:Key="ISContact" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="C:\Users\David Rigan\Documents\Visual Studio 2015\Projects\WpfPemesananMakanan\WpfPemesananMakanan\Resource\Contacts_64px.png"/>
+
     </Application.Resources>
 </Application>

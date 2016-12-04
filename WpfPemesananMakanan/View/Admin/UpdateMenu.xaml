@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfPemesananMakanan.View.Admin.UpdateMenuPaket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPemesananMakanan.View.Admin"
+        mc:Ignorable="d"
+        Title="UpdateMenuPaket" Height="768" Width="1366" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Label x:Name="label3" Content="Status" HorizontalAlignment="Left" Margin="25,536,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="145,535,0,0" VerticalAlignment="Top" Width="150" FontSize="16" VerticalContentAlignment="Center" Padding="6,5,5,5" Height="35" SelectionChanged="comboBox_SelectionChanged"/>
+        <Image x:Name="imgMenu" HorizontalAlignment="Left" Height="150" Margin="145,75,0,0" VerticalAlignment="Top" Width="150">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btnGambarMenu" Content="Pilih Gambar" HorizontalAlignment="Left" Height="35" Margin="145,235,0,0" VerticalAlignment="Top" Width="150" Click="btnGambarMenu_Click" FontSize="16" Padding="1"/>
+        <Label x:Name="label" Content="Nama Menu" HorizontalAlignment="Left" Margin="25,281,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.473,2.5" FontSize="18"/>
+        <TextBox x:Name="textNmMenu" HorizontalAlignment="Left" Height="35" Margin="145,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" TextChanged="textNmMenu_TextChanged" FontSize="16" AcceptsTab="True" AcceptsReturn="True" MaxLength="30" MaxLines="1" Padding="5,0" ScrollViewer.CanContentScroll="True" AutomationProperties.IsRequiredForForm="True" VerticalContentAlignment="Center"/>
+        <Label x:Name="label1" Content="Harga" HorizontalAlignment="Left" Margin="25,325,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="textHargaMenu" HorizontalAlignment="Left" Height="35" Margin="145,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textHargaMenu_TextChanged" Padding="5" AutomationProperties.IsRequiredForForm="True" FontSize="16" MaxLength="10" MaxLines="1" AcceptsTab="True" VerticalContentAlignment="Center"/>
+        <Label x:Name="label2" Content="Deskripsi" HorizontalAlignment="Left" Margin="25,369,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="textDeskripsiMenu" HorizontalAlignment="Left" Height="100" Margin="145,369,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" TextChanged="textDeskripsimenu_TextChanged" FontSize="16" MaxLength="150" AcceptsTab="True" Padding="5" VerticalContentAlignment="Center"/>
+        <Label x:Name="label3_Copy" Content="Kategori" HorizontalAlignment="Left" Margin="25,479,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="comboBoxKategoriMenu" HorizontalAlignment="Left" Height="35" Margin="145,479,0,0" VerticalAlignment="Top" Width="125" SelectionChanged="comboBox_SelectionChangedMenu" FontSize="16" Padding="6,5,5,5" VerticalContentAlignment="Center">
+            <ComboBoxItem Content="Tersedia" HorizontalAlignment="Left" Width="120"/>
+            <ComboBoxItem Content="Tidak Tersedia" HorizontalAlignment="Left" Width="123"/>
+        </ComboBox>
+        <Button x:Name="btnUbahMenu" Content="Ubah" HorizontalAlignment="Left" Height="45" Margin="145,600,0,0" VerticalAlignment="Top" Width="140" Click="btnUbahMenu_Click" FontSize="16"/>
+
+    </Grid>
+</Window>

@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,7 +59,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Entity\EnPemesanan.cs" />
+    <Compile Include="Entity\EnJabatan.cs" />
+    <Compile Include="Entity\EnKategori.cs" />
+    <Compile Include="Entity\EnPegawai.cs" />
+    <Compile Include="Implement\ImJabatan.cs" />
+    <Compile Include="Implement\ImKategori.cs" />
+    <Compile Include="Implement\ImPegawai.cs" />
+    <Compile Include="Implement\ImPemesanan.cs" />
+    <Compile Include="Interface\InJabatan.cs" />
+    <Compile Include="Interface\InKategori.cs" />
+    <Compile Include="Interface\InPegawai.cs" />
+    <Compile Include="Interface\InPemesanan.cs" />
+    <Compile Include="Koneksi\KoneksiDB.cs" />
+    <Compile Include="View\Admin\AddMenu.xaml.cs">
+      <DependentUpon>AddMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\AddPegawai.xaml.cs">
+      <DependentUpon>AddPegawai.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\UpdateMenu.xaml.cs">
+      <DependentUpon>UpdateMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\VwTampilMenu.xaml.cs">
+      <DependentUpon>VwTampilMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Monitoring\VwPemesanan.xaml.cs">
+      <DependentUpon>VwPemesanan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VwLoginPegawai.xaml.cs">
+      <DependentUpon>VwLoginPegawai.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VwPemesanan.xaml.cs">
+      <DependentUpon>VwPemesanan.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Greetings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,12 +101,44 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Entity\EnMenu.cs" />
+    <Compile Include="Factory\FactoryAll.cs" />
+    <Compile Include="Greetings.xaml.cs">
+      <DependentUpon>Greetings.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Admin\AddMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\AddPegawai.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\UpdateMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\VwTampilMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Monitoring\VwPemesanan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VwLoginPegawai.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VwPemesanan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implement\ImMenu.cs" />
+    <Compile Include="Interface\InMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,6 +156,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +166,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
